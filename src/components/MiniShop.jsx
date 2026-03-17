@@ -1,14 +1,17 @@
 import { useState } from 'react'
+import Card from './Card'
 
-function MiniShop(){
-  const [ detailed, setDetailed] = useState(false)
+function MiniShop({products}){
 
   return (
-      <div className = 'card'>
-        <p>Название: {}</p>
-        <p>Цена: ${}</p>
-        <button onClick = {() => setDetailed(prev => !prev)}>{detailed ? 'Скрыть' : 'Подробнее'}</button>
-      </div>
+      <>
+        {products.map((product) =>
+            <Card
+                key={product.id}
+                product = {product}
+            />
+        )}
+      </>
   )
 }
 
