@@ -1,16 +1,34 @@
 import { useState, useEffect } from 'react'
-import MiniShop from './components/MiniShop.jsx'
+import UserDirectory from "./components/UserDirectory.jsx";
 
 function App() {
-  const products = [
-    {id: 1, name: "iPhone 13", price: 600, description: 'Good phone' },
-    {id: 2, name: 'MacBook Air', price: 900, description: 'Light Laptop' },
-    {id: 3, name: 'Samsung Galaxy', price: 500, description: 'Android Phone' },
+  const users = [
+    {
+      id: 1,
+      name: "Alex",
+      age: 25,
+      profession: "Frontend developer",
+      bio: "Likes React"
+    },
+    {
+      id: 2,
+      name: "Maria",
+      age: 30,
+      profession: "Designer",
+      bio: "Figma expert"
+    },
+    {
+      id: 3,
+      name: "John",
+      age: 28,
+      profession: "Backend developer",
+      bio: "Node.js"
+    }
   ]
 
   return (
     <>
-      <MiniShop products = {products}/>
+      <UserDirectory users = {users} />
     </>
   )
 }
